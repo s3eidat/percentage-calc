@@ -1,0 +1,18 @@
+.pc-grid { align-items: stretch; }
+.pc { display: flex; flex-direction: column; gap: 10px; }
+.pc h2 { margin: 0; }
+.sent { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; color: var(--text-2); font-size: 14.5px; line-height: 1.4; }
+.sent .input { width: 76px; min-height: 38px; padding: 7px 10px; font-weight: 600; font-size: 15px; text-align: center; }
+.seg.mini { padding: 3px; align-self: flex-start; }
+.seg.mini button { padding: 4px 9px; font-size: 12.5px; }
+.res { display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 8px 8px 8px 14px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--line); }
+.res b { flex: 1; min-width: 0; font-size: 24px; font-weight: 700; letter-spacing: -.02em; color: var(--accent); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.res .chip { flex: none; }
+.chip.up { color: var(--ok); }
+.chip.down { color: var(--danger); }
+.how { margin: 0; color: var(--text-3); font-size: 12.5px; font-family: var(--mono); overflow-wrap: anywhere; }
+.how:empty { display: none; }
+.mm { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.mm div { container-type: inline-size; padding: 8px 10px; border-radius: 12px; background: var(--surface-2); border: 1px solid var(--line); }
+.mm b { display: block; white-space: nowrap; font-size: min(20px, 24cqi); font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.mm span { font-size: 12px; color: var(--text-3); }

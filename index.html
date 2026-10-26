@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; media-src 'self' data: blob:; connect-src 'self' data: blob:; worker-src 'self' blob:; manifest-src 'self'; form-action 'none'; base-uri 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Percentage Calc — Free Percentage Calculator, Change, Reverse, Margin | S3eidat Tools</title>
+<meta name="description" content="Every percentage question in one page: X% of Y, what percent, percent change, increase or decrease, reverse percentage (before VAT) and margin vs markup. Free and private.">
+<meta property="og:title" content="Percentage Calc — free, private percentage calculator">
+<meta property="og:description" content="Every percentage question, answered live. Runs 100% in your browser.">
+<meta property="og:image" content="screenshot.png">
+<link rel="icon" href="kit/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="kit/kit.css">
+<link rel="stylesheet" href="app.css">
+<script src="kit/kit.js"></script>
+</head>
+<body data-tool="percentage-calc">
+<main class="s3-main">
+  <section class="s3-hero">
+    <h1>Percentage Calc</h1>
+    <p>Every everyday percentage question on one page. Type in any card and the answer updates as you type, with the working shown.</p>
+  </section>
+
+  <div class="grid-3 pc-grid">
+    <section class="card pc" data-k="of">
+      <h2>Percent of a number</h2>
+      <p class="sent">What is <input class="input" id="of-x" inputmode="decimal" aria-label="Percent"> % of <input class="input" id="of-y" inputmode="decimal" aria-label="Number"> ?</p>
+      <div class="res"><b id="of-r">—</b><button class="btn ghost icon small cp" data-for="of-r" aria-label="Copy result"><svg class="i"><use href="#i-copy"/></svg></button></div>
+      <p class="how" id="of-h"></p>
+    </section>
+
+    <section class="card pc" data-k="what">
+      <h2>What percent?</h2>
+      <p class="sent"><input class="input" id="wh-x" inputmode="decimal" aria-label="Part"> is what % of <input class="input" id="wh-y" inputmode="decimal" aria-label="Whole"> ?</p>
+      <div class="res"><b id="wh-r">—</b><button class="btn ghost icon small cp" data-for="wh-r" aria-label="Copy result"><svg class="i"><use href="#i-copy"/></svg></button></div>
+      <p class="how" id="wh-h"></p>
+    </section>
+
+    <section class="card pc" data-k="chg">
+      <h2>Percent change</h2>
+      <p class="sent">From <input class="input" id="ch-x" inputmode="decimal" aria-label="Old value"> to <input class="input" id="ch-y" inputmode="decimal" aria-label="New value"></p>
+      <div class="res"><b id="ch-r">—</b><span class="chip" id="ch-c" hidden></span><button class="btn ghost icon small cp" data-for="ch-r" aria-label="Copy result"><svg class="i"><use href="#i-copy"/></svg></button></div>
+      <p class="how" id="ch-h"></p>
+    </section>
+
+    <section class="card pc" data-k="inc">
+      <h2>Increase or decrease</h2>
+      <span class="seg mini" id="inc-d" role="group" aria-label="Direction"><button type="button" data-v="+" aria-pressed="true">Increase</button><button type="button" data-v="-" aria-pressed="false">Decrease</button></span>
+      <p class="sent"><input class="input" id="inc-y" inputmode="decimal" aria-label="Number"> by <input class="input" id="inc-x" inputmode="decimal" aria-label="Percent"> %</p>
+      <div class="res"><b id="inc-r">—</b><button class="btn ghost icon small cp" data-for="inc-r" aria-label="Copy result"><svg class="i"><use href="#i-copy"/></svg></button></div>
+      <p class="how" id="inc-h"></p>
+    </section>
+
+    <section class="card pc" data-k="rev">
+      <h2>Reverse percentage</h2>
+      <span class="seg mini" id="rv-d" role="group" aria-label="Direction"><button type="button" data-v="+" aria-pressed="true">After + %</button><button type="button" data-v="-" aria-pressed="false">After − %</button></span>
+      <p class="sent"><input class="input" id="rv-y" inputmode="decimal" aria-label="Final amount"> after <span id="rv-s">+</span><input class="input" id="rv-x" inputmode="decimal" aria-label="Percent"> %</p>
+      <div class="res"><b id="rv-r">—</b><button class="btn ghost icon small cp" data-for="rv-r" aria-label="Copy result"><svg class="i"><use href="#i-copy"/></svg></button></div>
+      <p class="how" id="rv-h"></p>
+    </section>
+
+    <section class="card pc" data-k="mm">
+      <h2>Margin vs markup</h2>
+      <p class="sent">Cost <input class="input" id="mm-c" inputmode="decimal" aria-label="Cost"> sold for <input class="input" id="mm-p" inputmode="decimal" aria-label="Selling price"></p>
+      <div class="mm" id="mm-r"></div>
+      <p class="how" id="mm-h"></p>
+    </section>
+  </div>
+  <p class="faint mt center">Tip: the answers use full precision; rounding is only for display (up to 6 decimals).</p>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
